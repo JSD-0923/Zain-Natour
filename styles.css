@@ -1,0 +1,70 @@
+/* Modes */
+.light-mode {
+  --brand-primary: #0768ac;
+  --brand-secondary: #03c180;
+  --bg_default: #ffffff;
+  --bg_body: #f0f9ff;
+  --lines-color: #dddddd;
+  --body-text: #333333;
+  --heart-color: #dc143c;
+}
+.dark-mode {
+  --brand-primary: #0768ac;
+  --brand-secondary: #03c180;
+  --bg_default: #1a1a1a;
+  --bg_body: #282828;
+  --lines-color: #000000;
+  --body-text: #ededed;
+  --heart-color: #dc143c;
+}
+
+/* reset */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  --font-weight-light: 200;
+  --font-weight-mid: 400;
+  --font-weight-bold: 700;
+}
+
+/* Body */
+body {
+  font-family: "Nunito Sans", sans-serif;
+  color: var(--body-text);
+  background-color: var(--bg_body);
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--bg_default);
+  height: 70px;
+  align-items: center;
+}
+.brand {
+  color: var(--brand-primary);
+  padding-left: 5px;
+}
+.btn-container {
+  display: flex;
+  padding-right: 5px;
+}
+.darkmode,
+.favourites {
+  display: flex;
+  border: #000000 solid 2px;
+  padding: 5px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+.darkmode > h3,
+.favourites > h3 {
+  padding-left: 10px;
+}
