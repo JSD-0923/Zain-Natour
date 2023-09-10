@@ -41,13 +41,14 @@ body {
 
 /* header */
 .header {
+  padding: 24px 4%;
   display: flex;
   justify-content: space-between;
   background-color: var(--bg_default);
-  height: 70px;
   align-items: center;
 }
 .brand {
+  font-size: larger;
   color: var(--brand-primary);
   padding-left: 5px;
 }
@@ -58,40 +59,69 @@ body {
 .darkmode,
 .favourites {
   display: flex;
-  border: #000000 solid 2px;
   padding: 5px;
   justify-content: space-between;
   align-items: center;
   padding: 5px;
+  border: var(--lines-color) solid 0.5px;
+  border-radius: 5px;
+  background-color: var(--bg_default);
+  font-weight: var(--font-weight-mid);
 }
-.darkmode > h3,
-.favourites > h3 {
+.darkmode {
+  margin-right: 10px;
+}
+.darkmode > span,
+.favourites > span {
   padding-left: 10px;
 }
 
-/* Welcome section */
+/* Welcome Section */
 .welcome {
-  height: 110px;
-  background: linear-gradient(
-    60deg,
-    var(--brand-primary) 0%,
-    var(--brand-primary) 30%,
-    var(--brand-secondary) 70%,
-    var(--brand-secondary) 100%
-  );
-  text-align: left;
-  padding-left: 30%;
+  /* text-align: center; */
 }
-.welcome-container {
-  padding-top: 20px;
+.bg-container {
+  height: 100px;
+  position: relative;
+  overflow: hidden;
 }
-.welcome-container > h2 {
-  color: var(--brand-secondary);
+
+.bg1,
+.bg2 {
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+
+.bg1 {
+  width: 80%;
+  left: 0;
+  background-color: var(--brand-primary);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  z-index: 3;
+}
+
+.bg2 {
+  width: 80%;
+  right: 0;
+  background-color: var(--brand-secondary);
+  clip-path: polygon(100% 0, 100% 100%, 0 0%);
+  z-index: 2;
+}
+.welcome-content {
+  position: relative; /* Make it a stacking context */
+  top: -40px; /* Specify the unit (e.g., pixels) */
+  padding-left: 40%;
+  z-index: 3; /* Set a higher z-index to place it on top */
+}
+.welcome-content > h2 {
+  color: var(--brand-primary);
 }
 
 /* Main content */
 .main-content {
-  width: 90%;
+  width: 92%;
   margin: auto;
+  background-color: var(--bg_body);
   background-color: #000000;
 }
