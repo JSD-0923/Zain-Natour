@@ -73,7 +73,7 @@ body {
 .welcome {
   height: 110px;
   background: linear-gradient(
-    45deg,
+    60deg,
     var(--brand-primary) 0%,
     var(--brand-primary) 30%,
     var(--brand-secondary) 70%,
