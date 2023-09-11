@@ -50,17 +50,36 @@
         <div class="bg-container">
           <div class="bg1"></div>
           <div class="bg2"></div>
-        </div>
-        <div class="welcome-content">
-          <h2>Welcome to our website</h2>
-          <p>We have a new desing that's fresh, modern, and easy to use</p>
+          <div class="welcome-content">
+            <h2>Welcome to our website!</h2>
+            <p>We have a new desing that's fresh, modern, and easy to use</p>
+          </div>
         </div>
       </div>
 
       <!-- search bar -->
       <div class="main-content">
         <!-- search -->
-        <div class="search"><h2>search the website</h2></div>
+        <div class="search">
+          <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" placeholder="Search for a topic" />
+          </div>
+          <div class="filters">
+            <div class="sort">
+              <span>Sort by:</span>
+              <select name="sort" id="sort">
+                <option value="most-viewed">Most Views</option>
+              </select>
+            </div>
+            <div class="filter">
+              <span>filter by:</span>
+              <select name="filter" id="filter">
+                <option value="by-letter">by letter</option>
+              </select>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
