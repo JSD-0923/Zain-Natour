@@ -221,51 +221,81 @@ body {
   padding: 10px 0 20px 0;
 }
 /* cards */
+
 .cards {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 40px;
   background-color: var(--bg_body);
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, auto));
+  gap: 2.5rem;
+}
+.card .card-image {
+  width: 100%;
+  height: 50%;
+}
+.card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card .card-image img:hover {
+  transform: translatey(-10px);
+  transition: 0.2 all linear;
 }
 
 .card {
-  background-color: var(--bg_default);
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 350px;
+  background-color: var(--bg_default);
   border-radius: 10px;
-  box-shadow: 0px 0px 10px var(--lines-color);
-}
-.card img {
-  max-width: 100%;
-  height: 47%;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+  box-shadow: 01px 0px 0px 2px var(--lines-color);
 }
 .card-catagory {
-  padding-top: 3%;
   font-weight: var(--font-weight-mid);
-}
-.card-topic {
-  font-weight: var(--font-weight-bold);
-}
-.card-rating {
-  padding-top: 10%;
-}
-.card-author {
-  padding-top: 3%;
-  font-weight: var(--font-weight-light);
-}
-.card > span {
-  padding-left: 20px;
+  margin-top: 18px; /* Add margin for spacing */
 }
 
-@media (max-width: 768px) {
-  .cards {
-    display: block;
-  }
-  .card {
-    margin-bottom: 40px;
-  }
+.card-topic {
+  font-weight: var(--font-weight-bold);
+  font-size: 1.2rem; /* Increase font size if needed */
+}
+
+.card-rating {
+  margin-top: 35px; /* Add margin for spacing */
+}
+
+.card-author {
+  font-weight: var(--font-weight-light);
+  color: #555; /* Change the color as desired */
+  margin-top: 15px; /* Add margin for spacing */
+}
+.card span {
+  margin-left: 20px;
+}
+
+/* footer */
+footer {
+  background: var(--brand-secondary);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 40px;
+  padding: 24px;
+  color: var(--brand-primary);
+  font-weight: var(--font-weight-bold);
+}
+ul {
+  display: flex;
+  list-style: none;
+}
+ul li {
+  color: var();
+  padding: 0 8px;
+}
+ul li a {
+  text-decoration: none;
 }
