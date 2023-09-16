@@ -278,6 +278,14 @@ body {
   margin-left: 20px;
 }
 
+.cards a,
+.cards a:hover,
+.cards a:visited,
+.cards a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* footer */
 footer {
   background: linear-gradient(
