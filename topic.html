@@ -21,7 +21,7 @@
     <header class="header">
       <h1 class="brand">Web Topics</h1>
       <div class="btn-container">
-        <button class="darkmode">
+        <button id="themeToggle" class="darkmode">
           <i class="fa-regular fa-moon"></i>
           <span>Dark mode</span>
         </button>
@@ -45,14 +45,84 @@
           </div>
         </div>
       </div>
-
-      <!-- topic -->
-      <div class="topic">
-        <span class="topic-catagory"></span>
-        <span class="topic-name">HTML</span>
-        <span class="topic-rating"></span>
-        <span class="topic-describtion"></span>
+      <!-- content container -->
+      <div class="main-content-wraper">
+        <div class="main-content">
+          <!-- topic -->
+          <div class="topic-section">
+            <span class="topic-catagory">Web Development Languages</span>
+            <span class="topic-name">HTML</span>
+            <span class="topic-rating"><i class="fa-regular fa-star"></i></span>
+            <p class="topic-describtion">
+              HTML (Hypertext Markup Languages) is the standard markup language
+              for creating web pages and other information that can be displayed
+              in a web browser. It provides a structure for content and defines
+              how it should be displayed on a web page, including text, images,
+              and multimeadia. HTML is essential for creating static web pages
+              and is a foundational technology for the World Wide Web.
+            </p>
+          </div>
+          <div class="card-section">
+            <img src="assets/javascript.jpg" alt="image not found" />
+            <span
+              ><span class="bold large">HTML</span> by
+              <a href="author.html">Sarah Smith</a></span
+            >
+            <div class="favorite">
+              <span class="s1">Interested about this topic?</span>
+              <button>
+                Add to favourites
+                <span> <i class="fa-regular fa-star"></i></span>
+              </button>
+              <span class="s2">Unlimited Credits</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="list-section">
+        <ul>
+          <li class="list-title">HTML Sub Topics</li>
+          <li class="list-item">
+            <i class="fa-regular fa-circle-check"></i> HTML systax and structure
+          </li>
+          <li class="list-item">
+            <i class="fa-regular fa-circle-check"></i> HTML elements and
+            attributes
+          </li>
+          <li class="list-item">
+            <i class="fa-regular fa-circle-check"></i> HTML froms and input
+            elements
+          </li>
+          <li class="list-item">
+            <i class="fa-regular fa-circle-check"></i> HTML tables and lists
+          </li>
+          <li class="list-item">
+            <i class="fa-regular fa-circle-check"></i> HTML multimeadia
+            elements(audio, video, images)
+          </li>
+          <li class="list-item">
+            <i class="fa-regular fa-circle-check"></i> HTML accessibility and
+            semantic markup
+          </li>
+        </ul>
       </div>
     </main>
+    <footer>
+      <p>&copy; 2019 - All Rights Reserved.</p>
+      <ul id="social">
+        <li>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+      </ul>
+    </footer>
+    <script src="themeToggle.js"></script>
   </body>
 </html>

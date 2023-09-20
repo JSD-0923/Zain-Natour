@@ -58,6 +58,7 @@ body {
 }
 .darkmode,
 .favourites {
+  color: var(--body-text);
   display: flex;
   padding: 5px;
   justify-content: space-between;
@@ -118,7 +119,7 @@ body {
   .welcome-content {
     text-align: center;
     padding: 30px; /* Adjust padding for mobile view */
-    padding-top: 60px;
+    padding-top: 50px;
   }
 
   /* Adjust font size and other styles for mobile view */
@@ -163,6 +164,7 @@ body {
   border: none;
   outline: none;
   width: 92%;
+  background-color: var(--bg_default);
 }
 .search-bar > i {
   margin-right: 10px;
@@ -182,14 +184,16 @@ body {
 }
 
 .filters select {
+  color: var(--body-text);
   border: none;
   width: 100%;
   outline: none;
   font-size: medium;
+  background-color: var(--bg_default);
 }
 .filters span {
   display: block;
-  padding-left: 4px;
+  padding-left: 8px;
   font-size: small;
 }
 @media (max-width: 768px) {
@@ -252,7 +256,8 @@ body {
   height: 350px;
   background-color: var(--bg_default);
   border-radius: 10px;
-  box-shadow: 01px 0px 0px 2px var(--lines-color);
+  border: none;
+  box-shadow: 0px 0px 10px var(--lines-color);
 }
 .card-catagory {
   font-weight: var(--font-weight-mid);

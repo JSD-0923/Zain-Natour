@@ -16,6 +16,12 @@
   --body-text: #ededed;
   --heart-color: #dc143c;
 }
+.bold {
+  font-weight: var(--font-weight-bold);
+}
+.large {
+  font-size: large;
+}
 
 /* reset */
 *,
@@ -57,6 +63,7 @@ body {
 }
 .darkmode,
 .favourites {
+  color: var(--body-text);
   display: flex;
   padding: 5px;
   justify-content: space-between;
@@ -81,7 +88,7 @@ body {
   height: 12vh;
   position: relative;
   overflow: hidden;
-  background-color: var(--body-text);
+  background-color: var(--bg_body);
 }
 
 .bg1,
@@ -117,7 +124,7 @@ body {
   .welcome-content {
     text-align: center;
     padding: 30px; /* Adjust padding for mobile view */
-    padding-top: 60px;
+    padding-top: 50px;
   }
 
   /* Adjust font size and other styles for mobile view */
@@ -133,5 +140,205 @@ body {
   color: var(--brand-secondary);
 }
 .welcome-content p {
-  color: var(--lines-color);
+  color: var(--body-text);
+}
+/* content */
+
+.main-content-wraper {
+  background-color: var(--bg_default);
+  color: var(--body-text);
+  position: relative;
+  z-index: 1;
+}
+.main-content {
+  padding: 2%;
+  width: 65%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+/* topic section */
+.topic-section {
+  padding-right: 18px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 70%;
+  z-index: 1;
+}
+.topic-section .topic-catagory {
+  color: var(--brand-secondary);
+  font-size: larger;
+}
+.topic-section .topic-name {
+  font-size: xx-large;
+  font-weight: var(--font-weight-bold);
+}
+.topic-section .topic-describtion {
+  padding-top: 4%;
+  font-size: large;
+  font-weight: var(--font-weight-mid);
+}
+/* card section */
+.card-section {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: auto;
+  z-index: 3;
+  box-shadow: 0px 0px 5px var(--lines-color);
+}
+
+.card-section > img {
+  height: auto;
+  width: 100%;
+}
+.card-section > span {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  width: 90%;
+  margin: auto;
+}
+.card-section .favorite {
+  display: flex;
+  flex-direction: column;
+  border: var(--lines-color) solid;
+  width: 90%;
+  align-self: center;
+  padding: 10px;
+  border: solid var(--lines-color) 0.5px;
+  margin-bottom: 10px;
+}
+.card-section .favorite .s1 {
+  padding: 10px 10px 0 10px;
+  font-weight: var(--font-weight-mid);
+}
+.card-section .favorite .s2 {
+  text-align: center;
+  font-weight: var(--font-weight-light);
+  color: rgb(156, 154, 154);
+}
+.card-section .favorite button {
+  padding: 15px;
+  font-size: x-large;
+  background-color: var(--brand-secondary);
+  border: none;
+  color: white;
+  font-weight: var(--font-weight-light);
+  margin: 10px;
+}
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column; /* Stack content vertically */
+    width: 90%; /* Adjust width to your preference */
+  }
+
+  .topic-section {
+    width: 100%; /* Take full width */
+  }
+
+  .card-section {
+    width: 100%; /* Take full width */
+    position: relative;
+  }
+
+  /* Additional responsive styles can be added here */
+}
+
+/* list section */
+/* list section */
+.list-section {
+  padding: 2%;
+  width: 65%;
+  margin: auto;
+  position: relative;
+}
+
+.list-section ul {
+  list-style: none;
+  width: 67%;
+  background-color: var(--bg_default);
+  padding: 0; /* Remove default padding */
+  border: 1px solid var(--lines-color); /* Add a border around the entire list */
+  border-radius: 5px; /* Add rounded corners to the list */
+}
+
+.list-title {
+  font-weight: bold;
+  font-size: 2em; /* Increase font size for the title */
+  padding: 20px 40px; /* Add padding to the title for spacing */
+  border-bottom: 1px solid var(--lines-color); /* Add a border at the bottom of the title */
+  border-top-left-radius: 5px; /* Rounded top-left corner */
+  border-top-right-radius: 5px; /* Rounded top-right corner */
+}
+
+.list-item {
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--lines-color); /* Add a border between list items */
+  font-size: 1.3em;
+}
+
+/* Style the bullet point (circle) */
+.list-item i.fa-regular.fa-circle-check {
+  margin-right: 10px;
+  color: var(--brand-secondary);
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+@media (max-width: 768px) {
+  .list-section {
+    padding: 2%;
+    width: 90%; /* Adjust width to your preference */
+    margin: auto;
+  }
+
+  .list-section ul {
+    width: 100%; /* Take full width */
+  }
+
+  .list-title {
+    font-size: 1.5em; /* Reduce font size for the title */
+    padding: 15px 30px; /* Adjust padding for the title */
+  }
+
+  .list-item {
+    padding: 15px 30px; /* Adjust padding for list items */
+    font-size: 1.1em; /* Reduce font size for list items */
+  }
+}
+
+/* footer */
+footer {
+  background: linear-gradient(
+    45deg,
+    var(--brand-primary),
+    var(--brand-secondary)
+  );
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 40px;
+  padding: 24px;
+  color: rgb(10, 24, 14);
+  font-weight: var(--font-weight-bold);
+  font-size: large;
+}
+footer ul {
+  display: flex;
+  list-style: none;
+}
+footer ul li {
+  color: var();
+  padding: 0 8px;
+}
+footer ul li a {
+  text-decoration: none;
 }
