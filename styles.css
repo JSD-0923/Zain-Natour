@@ -52,6 +52,9 @@ body {
   color: var(--brand-primary);
   padding-left: 5px;
 }
+.home-page {
+  text-decoration: none;
+}
 .btn-container {
   display: flex;
   padding-right: 5px;
@@ -165,6 +168,7 @@ body {
   outline: none;
   width: 92%;
   background-color: var(--bg_default);
+  color: var(--body-text);
 }
 .search-bar > i {
   margin-right: 10px;
@@ -272,6 +276,7 @@ body {
 
 .card-rating {
   margin-top: 35px; /* Add margin for spacing */
+  color: gold;
 }
 
 .card-author {
@@ -293,28 +298,10 @@ body {
 
 /* footer */
 footer {
-  background: linear-gradient(
-    45deg,
-    var(--brand-primary),
-    var(--brand-secondary)
-  );
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 40px;
-  padding: 24px;
-  color: rgb(10, 24, 14);
-  font-weight: var(--font-weight-bold);
+  text-align: center;
   font-size: large;
+  padding: 10px;
 }
-footer ul {
-  display: flex;
-  list-style: none;
-}
-footer ul li {
-  color: var();
-  padding: 0 8px;
-}
-footer ul li a {
-  text-decoration: none;
+footer i {
+  color: red;
 }

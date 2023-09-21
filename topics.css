@@ -57,6 +57,9 @@ body {
   color: var(--brand-primary);
   padding-left: 5px;
 }
+.home-page {
+  text-decoration: none;
+}
 .btn-container {
   display: flex;
   padding-right: 5px;
@@ -145,8 +148,8 @@ body {
 /* content */
 
 .main-content-wraper {
-  background-color: var(--bg_default);
-  color: var(--body-text);
+  background-color: #333333;
+  color: white;
   position: relative;
   z-index: 1;
 }
@@ -241,6 +244,7 @@ body {
 
   .topic-section {
     width: 100%; /* Take full width */
+    padding-bottom: 20px;
   }
 
   .card-section {
@@ -317,28 +321,10 @@ body {
 
 /* footer */
 footer {
-  background: linear-gradient(
-    45deg,
-    var(--brand-primary),
-    var(--brand-secondary)
-  );
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 40px;
-  padding: 24px;
-  color: rgb(10, 24, 14);
-  font-weight: var(--font-weight-bold);
+  text-align: center;
   font-size: large;
+  padding: 10px;
 }
-footer ul {
-  display: flex;
-  list-style: none;
-}
-footer ul li {
-  color: var();
-  padding: 0 8px;
-}
-footer ul li a {
-  text-decoration: none;
+footer i {
+  color: red;
 }
